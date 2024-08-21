@@ -2,7 +2,11 @@
 
 This is very simple example of how to create multi level / multi nested dropdown menu using just generic react-bootstrap and DropButton (which normally goes just one level)
 
+included example here:
 ![image](https://github.com/user-attachments/assets/0266e6f9-b9d1-4698-a974-9a6736102b78)
+
+how i use it elsewhere:
+![image](https://github.com/user-attachments/assets/08bb97b1-67fe-4087-bf47-29e381178bb0)
 
 
 # Ho to run test this project
