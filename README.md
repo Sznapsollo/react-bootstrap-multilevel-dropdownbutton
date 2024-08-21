@@ -19,6 +19,8 @@ This is very simple example of how to create multi level / multi nested dropdown
 # What does DropDownMenu.js do
 - it just displays normal DropdownButton content unless you specify in menu template that there is submenu for given node and in such case it will recursively put another DropDownMenu in menu tree. This is just brief example so adjusting the look of menu (override with css), direction of arrows (drop prop on DropdownButton), how to handle actions .. its all up to you ;-) have fun.
 
+Note that title property can take text but also any html element (inlcuding for example react-icons) so there are many possibilities here. I included icons nad text color in example.
+
 # How to create my own menu
 - menu should be provided to DropDownMenu using the following template (example in App.js)
 
@@ -28,32 +30,32 @@ This is very simple example of how to create multi level / multi nested dropdown
     "title": "Option 1",
     "submenu": null,
     "action": (itemClicked) => {
-        console.log('Clicked Option 1')
-    }
+            console.log('Clicked Option 1')
+        }
     },
     {
-    "title": "Option 2",
+    "title": <span style={{color: 'red'}}>Option 2</span>,
     "submenu": [
         {
-        "title": "Option 2.1",
+        "title": <span style={{width: '130px', fontWeight: 'bold'}}><IoAddCircleOutline style={{margin: '0px'}} className='h3' />&nbsp;Please add me</span>,
         "submenu": [
             {
             "title": "Option 2.1.1",
             "submenu": null,
             "action": (itemClicked) => {
-                console.log("Clicked Option 2.1.1")
-            }
+                    console.log("Clicked Option 2.1.1")
+                }
             },
             {
             "title": "Option 2.1.2",
             "submenu": [
                 {
-                "title": "Option 2.1.2.1",
-                "submenu": null
+                    "title": "Option 2.1.2.1",
+                    "submenu": null
                 },
                 {
-                "title": "Option 2.1.2.2",
-                "submenu": null
+                    "title": "Option 2.1.2.2",
+                    "submenu": null
                 }
             ]
             }
@@ -63,12 +65,12 @@ This is very simple example of how to create multi level / multi nested dropdown
         "title": "Option 2.2",
         "submenu": [
             {
-            "title": "Option 2.2.1",
-            "submenu": null
+                "title": "Option 2.2.1",
+                "submenu": null
             },
             {
-            "title": "Option 2.2.2",
-            "submenu": null
+                "title": "Option 2.2.2",
+                "submenu": null
             }
         ]
         }

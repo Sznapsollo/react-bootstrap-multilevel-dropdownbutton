@@ -1,4 +1,5 @@
 import DropDownMenu from "./DropDownMenu";
+import { IoAddCircleOutline } from "react-icons/io5";
 import './App.css';
 
 function App() {
@@ -20,10 +21,10 @@ function App() {
                 }
               },
               {
-                "title": "Option 2",
+                "title": <span style={{color: 'red'}}>Option 2</span>,
                 "submenu": [
                   {
-                    "title": "Option 2.1",
+                    "title": <span style={{width: '130px', fontWeight: 'bold'}}><IoAddCircleOutline style={{margin: '0px'}} className='h3' />&nbsp;Please add me</span>,
                     "submenu": [
                       {
                         "title": "Option 2.1.1",
